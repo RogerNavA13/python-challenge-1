@@ -52,7 +52,7 @@ menu = {
 
 # 1. Set up order list. Order list will store a list of dictionaries for
 # menu item name, item price, and quantity ordered
-
+order=[]
 
 # Launch the store and present a greeting to the customer
 print("Welcome to the variety food truck.")
@@ -118,7 +118,7 @@ while place_order:
                     }
                     i += 1
             # 2. Ask customer to input menu item number
-
+                menu_selection=77
 
             # 3. Check if the customer typed a number
 
@@ -128,7 +128,7 @@ while place_order:
                 # 4. Check if the menu selection is in the menu items
 
                     # Store the item name as a variable
-
+                
 
                     # Ask the customer for the quantity of the menu item
 
@@ -156,21 +156,23 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-
+        match keep_ordering.lower():
+            case'y':
                 # Keep ordering
-
+                place_order = True
                 # Exit the keep ordering question loop
-
+                break
+            case'n':
                 # Complete the order
-
+                place_order = False 
                 # Since the customer decided to stop ordering, thank them for
                 # their order
-
+                print("Thank you for your order.")
                 # Exit the keep ordering question loop
-
-
+                break
+            case _:
                 # Tell the customer to try again
-
+                print("I don't understand your response. Please try again.")
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
@@ -182,6 +184,22 @@ print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
 
 # 6. Loop through the items in the customer's order
+Snacks = ["Cookie", "Banana", "Apple", "Granola bar"]
+for 1 in Snacks:
+    print("This is what we are preparing for you.\n")
+    break
+Meals = ["Burrito", "Teriyaki Chicken", "Sushi", "Pad Thai", "Cheese", "Pepperoni", "Vegetarian", "Burger", "Chicken", "Beef"]
+for 2 in Meals:
+    print("This is what we are preparing for you.\n")
+    break
+Drinks = ["Small", "Medium", "Large", "Green", "Thai iced", "Irish breakfast", "Espresso", "Flat white", "Iced"]
+for 3 in Drinks:
+    print("This is what we are preparing for you.\n")
+    break
+Dessert = ["Chocolate lava cake","New York", "Strawberry", "Australian Pavlova", "Rice pudding", "Fried banana"]
+for 4 in Dessert:
+    print("This is what we are preparing for you.\n")
+    break
 
     # 7. Store the dictionary items as variables
 
